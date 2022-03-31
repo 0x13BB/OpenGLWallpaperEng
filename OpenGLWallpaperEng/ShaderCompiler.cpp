@@ -22,12 +22,12 @@ int ShaderCompiler::load_shader(std::string frag_shader_file_path, std::string v
 
     const char* fragmentShaderSource = file_content_frag.c_str();
 
-	// Вершинный шейдер
+	
     int vertexShader = glCreateShader(GL_VERTEX_SHADER);
     glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
     glCompileShader(vertexShader);
 
-    // Проверка на наличие ошибок компилирования вершинного шейдера
+    
     int success;
     char infoLog[512];
     glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success);
@@ -38,12 +38,12 @@ int ShaderCompiler::load_shader(std::string frag_shader_file_path, std::string v
         std::cin.get();
     }
 
-    // Фрагментный шейдер
+    
     int fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
     glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
     glCompileShader(fragmentShader);
 
-    // Проверка на наличие ошибок компилирования фрагментного шейдера
+    
     glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &success);
     if (!success)
     {
@@ -52,13 +52,12 @@ int ShaderCompiler::load_shader(std::string frag_shader_file_path, std::string v
         std::cin.get();
     }
 
-    // Связывание шейдеров
+    
     int shaderProgram = glCreateProgram();
     glAttachShader(shaderProgram, vertexShader);
     glAttachShader(shaderProgram, fragmentShader);
     glLinkProgram(shaderProgram);
 
-    // Проверка на наличие ошибок связывания шейдеров
     glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
     if (!success) {
         glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
