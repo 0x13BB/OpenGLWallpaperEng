@@ -22,9 +22,7 @@ int ShaderCompiler::load_shader(std::string frag_shader_file_path, std::string v
 
     const char* fragmentShaderSource = file_content_frag.c_str();
 
-    // Компилирование нашей шейдерной программы
-
-   // Вершинный шейдер
+	// Вершинный шейдер
     int vertexShader = glCreateShader(GL_VERTEX_SHADER);
     glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
     glCompileShader(vertexShader);

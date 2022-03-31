@@ -148,10 +148,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="glad.c" />
+    <ClCompile Include="IEntity.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="ShaderCompiler.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="IEntity.h" />
+    <ClInclude Include="PerfTimer.h" />
     <ClInclude Include="ShaderCompiler.h" />
     <ClInclude Include="WallpaperTarget.h" />
   </ItemGroup>

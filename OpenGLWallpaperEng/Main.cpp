@@ -12,12 +12,26 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <vector>
 #include <random>
+#include <thread>
+
+#include "PerfTimer.h"
+
 
 int main(int argc, char* argv[])
 {
+	while(true)
+	{
+		PerfTimer<std::chrono::milliseconds> v1("first");
+		int a = 1;
+		while (a < 10000000)
+		{
 
-	std::cout << "hello" << std::endl;
+			a++;
 
+		}
+	}
+	
+	//std::cout << a;
 	std::cin.get();
 
 	return 0;
