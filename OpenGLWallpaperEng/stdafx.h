@@ -1,0 +1,21 @@
+#pragma once
+#include <glad/glad.h>
+#include <GLFW/glfw3.h>
+#define GLFW_EXPOSE_NATIVE_WIN32
+// data struct
+#include <chrono>
+#include <cmath>
+#include <random>
+#include <string>
+#include <thread>
+#include <vector>
+// io
+#include <fstream>
+#include <iostream>
+#include <sstream>
+// api
+#include <Windows.h>
+#include <GLFW/glfw3native.h>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>

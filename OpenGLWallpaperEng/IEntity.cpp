@@ -1,1 +1,2 @@
-﻿#include "IEntity.h"
+﻿#include "stdafx.h"
+#include "IEntity.h"

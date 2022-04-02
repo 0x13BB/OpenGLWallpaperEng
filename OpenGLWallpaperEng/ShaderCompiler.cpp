@@ -1,4 +1,5 @@
-﻿#include "ShaderCompiler.h"
+﻿#include "stdafx.h"
+#include "ShaderCompiler.h"
 
 
 int ShaderCompiler::load_shader(std::string frag_shader_file_path, std::string vert_shader_file_path)

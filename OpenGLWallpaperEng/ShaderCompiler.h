@@ -1,10 +1,7 @@
 ﻿#pragma once
+#include "stdafx.h"
 
-#include <fstream>
-#include <sstream>
-#include <string>
-#include <iostream>
-#include <glad/glad.h>
+
 
 
 class ShaderCompiler {

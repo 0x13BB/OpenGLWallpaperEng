@@ -1,8 +1,4 @@
 #pragma once
-#include <chrono>
-#include <string>
-#include <iostream>
-
 template<typename Period>
 class PerfTimer
 {
